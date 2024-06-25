@@ -1,18 +1,5 @@
-#![feature(assert_matches)]
-#[allow(unused_variables)]
-#[allow(unused_imports)]
-
-use std::assert_matches::assert_matches;
-use std::iter::zip;
-
-use itertools::Itertools;
 use num_traits::One;
-use rand::rngs::SmallRng;
-use rand::{Rng, SeedableRng};
 
-
-use stwo_prover::examples::fibonacci::air::FibonacciAir;
-use stwo_prover::examples::fibonacci::component::FibonacciComponent;
 use stwo_prover::core::backend::cpu::CpuCircleEvaluation;
 use stwo_prover::core::channel::{Blake2sChannel, Channel};
 use stwo_prover::core::fields::m31::BaseField;
@@ -24,6 +11,12 @@ use stwo_prover::core::vcs::blake2_hash::Blake2sHasher;
 use stwo_prover::core::vcs::hasher::Hasher;
 
 use stwo_prover::core::fields::m31::M31;
+
+mod fib_air;
+mod fib_component;
+
+use fib_air::FibonacciAir;
+use fib_component::FibonacciComponent;
 
 pub struct Fibonacci {
     pub air: FibonacciAir,
