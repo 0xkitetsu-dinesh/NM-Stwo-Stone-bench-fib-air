@@ -551,16 +551,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "stwo-fibonacci"
-version = "0.1.0"
-dependencies = [
- "itertools 0.12.1",
- "num-traits",
- "rand",
- "stwo-prover",
-]
-
-[[package]]
 name = "stwo-prover"
 version = "0.1.1"
 source = "git+https://github.com/starkware-libs/stwo.git#1b443ac9767f6c833f330890ffd95305e9259e13"
@@ -579,6 +569,16 @@ dependencies = [
  "starknet-ff",
  "thiserror",
  "tracing",
+]
+
+[[package]]
+name = "stwo_fibonacci"
+version = "0.1.0"
+dependencies = [
+ "itertools 0.12.1",
+ "num-traits",
+ "rand",
+ "stwo-prover",
 ]
 
 [[package]]

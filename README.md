@@ -1,0 +1,3 @@
+```
+make bench_fib
+```
